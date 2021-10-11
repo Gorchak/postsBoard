@@ -1,0 +1,39 @@
+
+.post-page-body{
+    padding: 20px;
+}
+
+.post-page-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-results-container{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    padding: 30px;
+    border: 1px solid lightgray;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.post-item{
+    width: 80%;
+    border: 1px solid lightgray;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.post-name{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.post-message{
+    font-size: 18px;
+}

@@ -1,0 +1,47 @@
+
+<nav class="categories-container">
+    <div class="category" [ngClass]="{'category-active': !selectedCategory}" (click)="clickSelectCategory(null)">
+      All categories
+    </div>
+    <div class="category" [ngClass]="{'category-active': selectedCategory === category}" *ngFor="let category of categoriesData" (click)="clickSelectCategory(category)">
+      {{category.name}}
+    </div>
+  </nav>
+  
+  <section class="post-container">
+    <ng-template [ngIf]="postsData?.length" [ngIfElse]="noResults">
+      <div class="sort-posts">
+        Sort by creative date:
+        <div class="sort-posts-buttons">
+          <button (click)="descendingOrderBy = false" [ngClass]="{'category-active': !descendingOrderBy}">
+            Ascending
+          </button>
+          <button (click)='descendingOrderBy = true' [ngClass]="{'category-active': descendingOrderBy}">
+            Descending
+          </button>
+        </div>
+      </div>
+  
+      <a class="post-item" *ngFor="let item of postsData | orderBy : 'createdAt': descendingOrderBy" [routerLink]="['post', item.id]">
+        <p class="post-name">
+          {{item.name}}
+        </p>
+        <p class="post-message">
+          {{item.message}}
+        </p>
+        <p class="post-category">
+          Category: {{item.category}}
+          <br>
+          Created at: {{item.createdAt | date:'medium'}}
+        </p>
+      </a>
+    </ng-template>
+  
+    <ng-template #noResults>
+      <div class="no-results-container">No results</div>
+    </ng-template>
+  </section>
+  
+  
+  
+  

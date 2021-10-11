@@ -1,0 +1,28 @@
+<div class="post-page-body">
+    <button (click)="goToDashboard()">
+        Go to Dashboard
+    </button>
+
+    <div class="post-page-container">
+        <ng-template [ngIf]="currentPost" [ngIfElse]="noResults">
+            <div class="post-item">
+                <p class="post-name">
+                    {{currentPost.name}}
+                </p>
+                <p class="post-message">
+                    {{currentPost.message}}
+                </p>
+                <p class="post-category">
+                    Category: {{currentPost.category}}
+                    <br>
+                    Created at: {{currentPost.createdAt | date:'medium'}}
+                </p>
+            </div>
+        </ng-template>
+    
+        <ng-template #noResults>
+            <div class="no-results-container">No results</div>
+        </ng-template>
+    </div>
+    
+</div>

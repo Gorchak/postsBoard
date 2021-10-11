@@ -1,0 +1,97 @@
+p {
+    margin: 6px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+// categories
+
+.categories-container {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    padding: 8px 12px;
+}
+
+.category{
+    min-width: 80px;
+    padding: 4px 8px;
+    margin: 0 6px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.category-active{
+    background: green;
+    color: white;
+}
+
+
+// posts
+
+.no-results-container{
+    font-size: 22px;
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sort-posts{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 8px;
+}
+
+.sort-posts-buttons{
+    margin: 8px 0 10px;
+
+    button{
+        cursor: pointer;
+    }
+}
+
+.post-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 12px;
+    background: #EFEFEF;
+}
+
+.post-item{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background: white;
+    max-width: 350px;
+    border-radius: 6px;
+    margin: 10px;
+    padding: 15px 12px;
+}
+
+.post-name{
+    display: inline-block;
+    width: 100%;
+    font-weight: bold;
+}
+
+.post-message{
+    display: inline-block;
+    width: 100%;
+    color: #818181;
+}
+
+.post-category{
+    display: inline-block;
+    width: 100%;
+    color: #8A8A8A;
+    font-size: 12px;
+}
